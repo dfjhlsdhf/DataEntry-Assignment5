@@ -5,8 +5,8 @@
 import { BlobServiceClient } from "@azure/storage-blob";
 
 const containerName = `uploaded`;
-const sasToken = process.env.REACT_APP_AZURE_STORAGE_SAS_TOKEN;
-const storageAccountName = process.env.REACT_APP_AZURE_STORAGE_RESOURCE_NAME;
+const sasToken = 'sp=racwdl&st=2023-04-21T05:35:08Z&se=2023-04-28T13:35:08Z&spr=https&sv=2021-12-02&sr=c&sig=71whcZQiEo5WXy8vELkNDvTM6OD1fzE6Hp1hT1qEF7k%3D';
+const storageAccountName = 'dataimagesstorage';
 // </snippet_package>
 
 // <snippet_get_client>
