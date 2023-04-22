@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import uploadFileToBlob, { isStorageConfigured, getBlobsInContainer } from './azure-storage-blob';
 import DisplayImagesFromContainer from './ContainerImages';
 const storageConfigured = isStorageConfigured();
-
+const url = "https://dataentry-funcs.azurewebsites.net/api/HttpTrigger"
 const App = () => {
   // all blobs in container
   const [blobList, setBlobList] = useState([]);
@@ -38,7 +38,16 @@ const App = () => {
 
     // *** UPLOAD TO AZURE STORAGE ***
     await uploadFileToBlob(fileSelected);
-
+// *** SEND POST REQUEST ***
+await fetch(url, {
+  method: "POST",
+  body: JSON.stringify({
+    name: fileSelected.name
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
     // reset state/form
     setFileSelected(null);
     setFileUploaded(fileSelected.name);
@@ -58,6 +67,7 @@ const App = () => {
           </button>
     </div>
   )
+
 
   return (
     <div>
