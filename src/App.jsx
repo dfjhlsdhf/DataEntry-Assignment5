@@ -1,5 +1,3 @@
-// ./src/App.tsx
-
 import React, { useState, useEffect } from 'react';
 import uploadFileToBlob, { isStorageConfigured, getBlobsInContainer } from './azure-storage-blob';
 import DisplayImagesFromContainer from './ContainerImages';
