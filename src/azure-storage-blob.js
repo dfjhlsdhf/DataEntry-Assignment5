@@ -5,7 +5,7 @@
 import { BlobServiceClient } from "@azure/storage-blob";
 
 const containerName = `uploaded`;
-const sasToken = 'sp=racwdli&st=2023-04-22T03:12:55Z&se=2023-04-27T11:12:55Z&spr=https&sv=2021-12-02&sr=c&sig=0GI6EQJVPfNyaU6jtSKwqXdzv4odTZpd7ZyIDLc%2FNBI%3D';
+const sasToken = 'sp=racwdli&st=2023-05-03T21:20:52Z&se=2023-05-04T05:20:52Z&spr=https&sv=2022-11-02&sr=c&sig=B%2FAiK14YgKo0lAvgLRgdacuL%2B8cmZIQ67ZwhhsFVzUU%3D';
 const storageAccountName = 'dataimagesstorage';
 // </snippet_package>
 
